@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169903694-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169903694-1');
+  </script>
+  -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/contact.css" />
+</head>
+
+<body>
+  <div id="container">
+    <a href="/">Maintechstream</a>
+    <h1>
+      Contact us
+    </h1>
+
+    <form>
+      <label for="name">Name (optional):</label>
+      <input id="name" maxlength="100"></input><br><br>
+
+      <label for="email">Email address (optional):</label>
+      <input id="email" maxlength="100"></input><br><br>
+
+      <label for="topic">Topic (optional):</label>
+      <input id="topic" maxlength="100"></input><br><br>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" cols="75" maxlength="1500"></textarea>
+      <p id="empty-input-error">Please, fill in the message</p>
+      <br><br>
+
+      <button type="button" id="submit">
+        SEND
+      </button>
+    </form>
+
+  </div>
+
+  <script>
+    // Let the document know when the mouse is being used
+    document.body.addEventListener("mousedown", function () {
+      document.body.classList.add("using-mouse");
+    });
+
+    // Re-enable focus styling when Tab is pressed
+    document.body.addEventListener("keydown", function (event) {
+      if (event.keyCode === 9) {
+        document.body.classList.remove("using-mouse");
+      }
+    });
+  </script>
+  <script src="/contact.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+/* When mouse is detected, all focused elements have outline removed. */
+body.usingMouse :focus {
+  outline: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+body.usingMouse :active :hover {
+  outline: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+body {
+  background-color: #151515;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#loaderWrapper {
+  z-index: -1;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#loader {
+  width: 50px;
+  height: 50px;
+  border: solid #cccccc;
+  border-width: 5px;
+  border-top-width: 5px;
+  border-radius: 50%;
+  border-top: solid #151515;
+  animation: loaderSpin infinite 1s linear;
+}
+
+@keyframes loaderSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  color: inherit; /* gray color */
+  text-decoration: inherit; /* no underline */
+}
+
+iframe {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+#menuContainer {
+  position: relative;
+}
+
+#menu {
+  position: absolute;
+  display: inline-block;
+  top: 60px;
+  left: 10px;
+  background-color: #384151dd;
+  color: white;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#menu.loading {
+  background-color: transparent;
+}
+
+#menu p {
+  line-height: 1em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#branding {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 28px;
+}
+
+#logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+
+#controller {
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+#controller.loading {
+  display: none;
+}
+
+#controller p {
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+button {
+  align-self: flex-end;
+  background-color: transparent;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#prev {
+  background-image: url("./prev.svg");
+}
+
+#next {
+  background-image: url("./next.svg");
+}

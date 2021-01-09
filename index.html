@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Maintechstream</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+  </head>
+
+  <body>
+    <div id="loaderWrapper">
+    <div id="loader"></div>
+    </div>
+    <div id="player"></div>
+    <div id="menuContainer">
+      <div id="menu" class="loading">
+        <a href="/contact.html">
+          <div id="branding">
+            <img id="logo" src="/logo-white.svg" />
+            <p>Maintechstream</p>
+          </div>
+        </a>
+        <div id="controller" class="loading">
+          <button id="prev"></button>
+          <p id="channel"></p>
+          <button id="next"></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // switch document focus styling
+
+      function useMouse() {
+        document.body.classList.add("usingMouse");
+      }
+
+      function checkTabSetDefault(e) {
+        if (e.keyCode === 9) {
+          document.body.classList.remove("usingMouse");
+        }
+      }
+      // Let the document know when the mouse is being used
+      document.body.addEventListener("mousedown", useMouse);
+
+      // Re-enable focus styling when Tab is pressed
+      document.body.addEventListener("keydown", checkTabSetDefault);
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
