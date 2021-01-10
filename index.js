@@ -114,3 +114,8 @@ nextButton.addEventListener("click", switchChannel);
 
 var prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", switchChannel);
+
+document.onkeydown = function (e) {
+  if (e.key === "ArrowRight") nextButton.click();
+  else if (e.key === "ArrowLeft") prevButton.click();
+};
