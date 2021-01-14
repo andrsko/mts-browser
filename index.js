@@ -54,7 +54,6 @@ function onYouTubeIframeAPIReady() {
     .then((response) => response.json())
     .then((data) => {
       initialVideo = data;
-      console.log("START AT: " + typeof initialVideo.startAt);
       player = new YT.Player("player", {
         width: "640",
         height: "390",
