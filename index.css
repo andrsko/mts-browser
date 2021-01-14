@@ -112,7 +112,6 @@ iframe {
   margin-top: 10px;
   display: flex;
   margin-bottom: 5px;
-  justify-content: space-between;
 }
 
 #controller.loading {
@@ -138,6 +137,7 @@ button {
 
 #prev {
   background-image: url("./prev.svg");
+  margin-right: 10px;
 }
 
 #next {
