@@ -18,7 +18,7 @@ fetch(apiChannelsURL)
   .then((response) => response.json())
   .then((data) => {
     numberOfChannels = data["n"];
-    tagsByChannel = data["tags"];
+    channelTitles = data["titles"];
 
     // update layout
     menuEl.classList.remove("loading");
@@ -34,8 +34,7 @@ if (window.location.pathname !== "/")
 // change channel html content
 const channelElement = document.getElementById("channel");
 function setChannelElText() {
-  channelElement.innerText =
-    channelId + ". " + tagsByChannel[channelId].join(", ");
+  channelElement.innerText = channelId + ". " + channelTitles[channelId];
 }
 
 // create youtube player
